@@ -1,0 +1,49 @@
+Iris dataset
+
+from sklearn.datasets import load_iris
+iris = load_iris()
+iris
+type(iris)
+iris.keys()
+
+print(iris)
+
+print(iris.DESCR)
+print(iris.target_names)
+print(iris.frame)
+
+n_samples,n_features = iris.data.shape
+print("Number of samples: ",n_samples)
+print("Number of features: ",n_features)
+
+print(iris.data[0])
+iris.data[[12,26,89,114]]
+
+print(iris.data.shape)
+print(iris.target.shape)
+
+print(iris.target)
+
+import numpy as np
+np.bincount(iris.target)
+
+print(iris.target_names)
+print(iris.target)
+
+Wine dataset
+
+from sklearn.datasets import load_wine
+wine=load_wine()
+wine
+type(wine)
+wine.keys()
+
+print(wine)
+print(wine.DESCR)
+
+n_samples,n_features = wine.data.shape
+print("Number of samples: ",n_samples)
+print("Number of features: ",n_features)
+
+print(wine.target_names)
+print(wine.feature_names)
